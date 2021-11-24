@@ -357,7 +357,7 @@ public class EncodingWithMESCustomPreset {
         // that was created by calling Asset's create method.
         BlobContainerClient container =
                 new BlobContainerClientBuilder()
-                        .connectionString(response.assetContainerSasUrls().get(0))
+                        .endpoint(response.assetContainerSasUrls().get(0))
                         .buildClient();
 
         // Uploading from a local file:
@@ -513,7 +513,7 @@ public class EncodingWithMESCustomPreset {
 
         BlobContainerClient container =
                 new BlobContainerClientBuilder()
-                        .connectionString(assetContainerSas.assetContainerSasUrls().get(0))
+                        .endpoint(assetContainerSas.assetContainerSasUrls().get(0))
                         .buildClient();
 
         File directory = new File(outputFolder, assetName);
